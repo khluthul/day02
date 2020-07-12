@@ -6,7 +6,7 @@
 /*   By: khluthul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 15:33:56 by khluthul          #+#    #+#             */
-/*   Updated: 2020/07/08 16:30:40 by khluthul         ###   ########.fr       */
+/*   Updated: 2020/07/12 09:57:12 by khluthul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,26 @@ void	ft_print_comb()
 	int d2;
 	int d3;
 
+	d1 = 0;
 	while( d1 >= 0)
 	{
-		while()
-	putchar(d1);
-	putchar(d2);
-	putchar(d3);
+		while(d2 >= 0)
+		{
+			while(d3 >= 0)
+			{
+				if(d1 == d3 || d2 == d1)
+					d3 = d3 + 1;
+				write(1, &d3, 1);
+			}
+			if(d1 == d2)
+				d2 = d2 +1;
+			write(1, &d3, 1);
+		}
+		write(1, &d1, 1);
+	}
+}
+int	main()
+{
+	ft_print_comb();
+	return(0);
 }
